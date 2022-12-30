@@ -15,6 +15,9 @@ public class GoldenRatio {
         double f_left = f(left);
         double f_right = f(right);
 
+        System.out.printf("%10f%10f%10f%10f%10f%10f%10f\n",
+                length, a, b, left, right, f_left, f_right);
+
         if (length < 2*eps) return a + length / 2.0;
 
         if (f_left < f_right) return search_naive_recursive(a, right, eps);
